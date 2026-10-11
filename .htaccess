@@ -1,0 +1,7 @@
+# Yönetim paneli adresi Ayarlar sayfasından değiştirilebilir (router.php).
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-Za-z0-9_-]+)/?([A-Za-z]*)(\.php)?$ router.php?p=$1&f=$2 [L,QSA]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+Options -Indexes
